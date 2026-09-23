@@ -41,14 +41,14 @@ footer{padding:32px 0;border-top:4px solid var(--yellow);text-align:center}foote
 <nav class="wrap">
 <img class="navlogo" src="assets/logo.png" alt="Out of Time R.E.M. Tribute Band">
 <a href="#home" data-i18n="nav_home">HOME</a><a href="#band" data-i18n="nav_band">THE BAND</a><a href="#live" data-i18n="nav_live">LIVE</a><a href="#dates" data-i18n="nav_dates">DATES</a><a href="#booking" data-i18n="nav_booking">BOOKING</a><a href="#contact" data-i18n="nav_contact">CONTACT</a>
-<div class="lang"><button data-lang="de" class="active">DE</button><button data-lang="en">EN</button><button data-lang="fr">FR</button></div>
+<div class="lang"><button type="button" data-lang="de" class="active">DE</button><button type="button" data-lang="en">EN</button><button type="button" data-lang="fr">FR</button></div>
 </nav>
 </header>
 
 <main id="home">
 <section class="hero">
-<img class="bg" src="assets/hero.jpg" alt="Out of Time performing live">
-<div class="scribble">THE SONGS.<br>THE ENERGY.<br>THE SPIRIT.</div>
+<img class="bg" src="assets/hero-yellow.jpg" alt="Out of Time performing live">
+<div class="scribble" data-i18n="scribble">THE SONGS.<br>THE ENERGY.<br>THE SPIRIT.</div>
 <div class="hero-content wrap">
 <div class="hero-copy">
 <img class="hero-logo" src="assets/logo.png" alt="Out of Time R.E.M. Tribute Band">
@@ -69,14 +69,13 @@ footer{padding:32px 0;border-top:4px solid var(--yellow);text-align:center}foote
 <div>
 <h2 class="section-title" data-i18n="video_title">WATCH OUR <span>LIVE</span> VIDEO</h2>
 <div class="video-card"><img src="assets/portrait.jpg" alt="Out of Time singer live"><div class="play">▶</div></div>
-<p style="color:#aaa;font-family:Arial">Replace this panel with your YouTube or Vimeo embed when the final video is selected.</p>
+<p style="color:#aaa;font-family:Arial" data-i18n="video_note">Replace this panel with your YouTube or Vimeo embed when the final video is selected.</p>
 </div>
 <div id="dates" class="dates">
 <h2 class="section-title" data-i18n="dates_title">NEXT <span>DATES</span></h2>
 <div class="date"><strong>06.11.26</strong><div>NEUSTADT<br><small>Olaf's Werkstatt · Germany</small></div></div>
 <div class="date"><strong>07.11.26</strong><div>PÖSSNECK<br><small>Schützenhaus · Germany</small></div></div>
 <div class="date"><strong>06.02.27</strong><div>VERVIERS<br><small>Spirit of 66 · Belgium</small></div></div>
-<div class="date"><strong>21.08.27</strong><div>GAURAIN-RAMECROIX<br><small>Ultimate Tribute · Belgium</small></div></div> 
 <a class="btn" style="margin-top:25px" href="#contact" data-i18n="all_dates">ALL DATES →</a>
 </div>
 </div></section>
@@ -94,13 +93,13 @@ footer{padding:32px 0;border-top:4px solid var(--yellow);text-align:center}foote
 <p data-i18n="booking_text">Looking for a professional R.E.M. tribute for a festival, club or event? Send us your project, date and location. We will get back to you with availability and technical information.</p>
 <p><strong>Festivals · Clubs · Events · Germany · Belgium · Europe</strong></p></div>
 <div id="contact"><form onsubmit="sendMail(event)">
-<input id="name" required placeholder="Name / Organisation">
-<input id="email" type="email" required placeholder="Email">
-<input id="event" placeholder="Event / Venue / City">
-<input id="date" placeholder="Date">
-<textarea id="message" placeholder="Tell us about your event"></textarea>
+<input id="name" required data-ph="name_ph" placeholder="Name / Organisation">
+<input id="email" type="email" required data-ph="email_ph" placeholder="Email">
+<input id="event" data-ph="event_ph" placeholder="Event / Venue / City">
+<input id="date" data-ph="date_ph" placeholder="Date">
+<textarea id="message" data-ph="message_ph" placeholder="Tell us about your event"></textarea>
 <button class="btn" type="submit" data-i18n="send">SEND BOOKING REQUEST →</button>
-<div class="form-note">Set your booking email in the <code>BOOKING_EMAIL</code> constant in script.js before publishing.</div>
+<div class="form-note" data-i18n="form_note">Your booking email is configured in the site code.</div>
 </form></div>
 </div></section>
 </main>
@@ -111,13 +110,23 @@ footer{padding:32px 0;border-top:4px solid var(--yellow);text-align:center}foote
 <script>
 const BOOKING_EMAIL = "stelio.gollas@gmail.com";
 const t={
-de:{nav_home:"HOME",nav_band:"DIE BAND",nav_live:"LIVE",nav_dates:"TERMINE",nav_booking:"BOOKING",nav_contact:"KONTAKT",tagline:"Das R.E.M.-Erlebnis — live",book:"BAND BUCHEN →",f1:"AUTHENTISCHER SOUND",f1p:"Der Geist von R.E.M.",f2:"PROFESSIONELLE BAND",f2p:"Erfahren & leidenschaftlich",f3:"LIVE-SHOW",f3p:"Emotion & Energie",f4:"EUROPAWEITES BOOKING",f4p:"Belgien · Deutschland · Europa",video_title:"UNSER",dates_title:"NÄCHSTE",all_dates:"ALLE TERMINE →",about_title:"ÜBER",about_text:"Out of Time ist eine belgische Tribute-Band, die sich der Musik und dem Live-Spirit von R.E.M. widmet. Von Orange Crush bis Everybody Hurts und Losing My Religion verbindet die Show bekannte Songs mit echter Live-Energie.",about_text2:"Buchbar für Festivals, Clubs, Kulturveranstaltungen und Events in Belgien, Deutschland und ganz Europa.",booking_title:"OUT OF TIME",booking_text:"Sie suchen eine professionelle R.E.M.-Tribute-Band für ein Festival, einen Club oder ein Event? Senden Sie uns Datum, Ort und Veranstaltungsinfos.",booking_cta:"BOOKING →",send:"BOOKING-ANFRAGE SENDEN →"},
-en:{nav_home:"HOME",nav_band:"THE BAND",nav_live:"LIVE",nav_dates:"DATES",nav_booking:"BOOKING",nav_contact:"CONTACT",tagline:"The R.E.M. experience — live",book:"BOOK THE BAND →",f1:"AUTHENTIC SOUND",f1p:"The spirit of R.E.M.",f2:"PROFESSIONAL BAND",f2p:"Experienced & passionate",f3:"LIVE SHOW",f3p:"Emotion & energy",f4:"EUROPEAN BOOKING",f4p:"Belgium · Germany · Europe",video_title:"WATCH OUR LIVE VIDEO",dates_title:"NEXT DATES",all_dates:"ALL DATES →",about_title:"ABOUT THE BAND",about_text:"Out of Time is a Belgian tribute band dedicated to the music and live spirit of R.E.M. From the explosive rock of Orange Crush to the emotion of Everybody Hurts and the timeless energy of Losing My Religion, the show travels across the band's catalogue with a strong focus on live atmosphere.",about_text2:"Available for festivals, clubs, cultural events and private events across Belgium, Germany and Europe.",booking_title:"BOOK OUT OF TIME",booking_text:"Looking for a professional R.E.M. tribute for a festival, club or event? Send us your project, date and location. We will get back to you with availability and technical information.",booking_cta:"BOOKING →",send:"SEND BOOKING REQUEST →"},
-fr:{nav_home:"ACCUEIL",nav_band:"LE GROUPE",nav_live:"LIVE",nav_dates:"DATES",nav_booking:"BOOKING",nav_contact:"CONTACT",tagline:"L’expérience R.E.M. — en live",book:"BOOKER LE GROUPE →",f1:"SON AUTHENTIQUE",f1p:"L’esprit de R.E.M.",f2:"GROUPE PROFESSIONNEL",f2p:"Expérience & passion",f3:"SHOW LIVE",f3p:"Émotion & énergie",f4:"BOOKING EUROPÉEN",f4p:"Belgique · Allemagne · Europe",video_title:"NOTRE VIDÉO LIVE",dates_title:"PROCHAINES DATES",all_dates:"TOUTES LES DATES →",about_title:"À PROPOS DU GROUPE",about_text:"Out of Time est un tribute band belge consacré à la musique et à l’esprit live de R.E.M. d’Orange Crush à Everybody Hurts, sans oublier Losing My Religion, le spectacle traverse le répertoire du groupe avec une vraie énergie scénique.",about_text2:"Disponible pour festivals, clubs, événements culturels et événements privés en Belgique, en Allemagne et en Europe.",booking_title:"BOOKER OUT OF TIME",booking_text:"Vous recherchez un tribute R.E.M. professionnel pour un festival, un club ou un événement ? Envoyez-nous votre projet, la date et le lieu. Nous vous répondrons avec nos disponibilités et les informations techniques.",booking_cta:"BOOKING →",send:"ENVOYER LA DEMANDE →"}};
-function setLang(lang){document.documentElement.lang=lang;document.querySelectorAll("[data-i18n]").forEach(e=>{let k=e.dataset.i18n;if(t[lang][k])e.textContent=t[lang][k]});document.querySelectorAll(".lang button").forEach(b=>b.classList.toggle("active",b.dataset.lang===lang));localStorage.setItem("oot_lang",lang)}
-document.querySelectorAll(".lang button").forEach(b=>b.onclick=()=>setLang(b.dataset.lang));
-setLang(localStorage.getItem("oot_lang")||"de");
-function sendMail(e){e.preventDefault();const body=`Name / Organisation: ${name.value}\nEmail: ${email.value}\nEvent / Venue / City: ${event.value}\nDate: ${date.value}\n\n${message.value}`;window.location.href=`mailto:${stelio.gollas@gmail.com}?subject=Out of Time booking request&body=${encodeURIComponent(body)}`}
+de:{nav_home:"HOME",nav_band:"DIE BAND",nav_live:"LIVE",nav_dates:"TERMINE",nav_booking:"BOOKING",nav_contact:"KONTAKT",tagline:"Das R.E.M.-Erlebnis — live",book:"BAND BUCHEN →",scribble:"DIE SONGS.<br>DIE ENERGIE.<br>DER SPIRIT.",f1:"AUTHENTISCHER SOUND",f1p:"Der Geist von R.E.M.",f2:"PROFESSIONELLE BAND",f2p:"Erfahren & leidenschaftlich",f3:"LIVE-SHOW",f3p:"Emotion & Energie",f4:"EUROPAWEITES BOOKING",f4p:"Belgien · Deutschland · Europa",video_title:"UNSER LIVE-VIDEO",video_note:"Hier später das YouTube- oder Vimeo-Video der Band einfügen.",dates_title:"NÄCHSTE TERMINE",all_dates:"ALLE TERMINE →",about_title:"ÜBER DIE BAND",about_text:"Out of Time ist eine belgische Tribute-Band, die sich der Musik und dem Live-Spirit von R.E.M. widmet. Von Orange Crush bis Everybody Hurts und Losing My Religion verbindet die Show bekannte Songs mit echter Live-Energie.",about_text2:"Buchbar für Festivals, Clubs, Kulturveranstaltungen und Events in Belgien, Deutschland und ganz Europa.",booking_title:"OUT OF TIME BUCHEN",booking_text:"Sie suchen eine professionelle R.E.M.-Tribute-Band für ein Festival, einen Club oder ein Event? Senden Sie uns Datum, Ort und Veranstaltungsinfos.",booking_cta:"BOOKING →",send:"BOOKING-ANFRAGE SENDEN →",form_note:"Die Booking-E-Mail ist im Website-Code hinterlegt.",name_ph:"Name / Organisation",email_ph:"E-Mail",event_ph:"Event / Veranstaltungsort / Stadt",date_ph:"Datum",message_ph:"Erzählen Sie uns von Ihrer Veranstaltung."},
+en:{nav_home:"HOME",nav_band:"THE BAND",nav_live:"LIVE",nav_dates:"DATES",nav_booking:"BOOKING",nav_contact:"CONTACT",tagline:"The R.E.M. experience — live",book:"BOOK THE BAND →",scribble:"THE SONGS.<br>THE ENERGY.<br>THE SPIRIT.",f1:"AUTHENTIC SOUND",f1p:"The spirit of R.E.M.",f2:"PROFESSIONAL BAND",f2p:"Experienced & passionate",f3:"LIVE SHOW",f3p:"Emotion & energy",f4:"EUROPEAN BOOKING",f4p:"Belgium · Germany · Europe",video_title:"WATCH OUR LIVE VIDEO",video_note:"Add the band's YouTube or Vimeo video here.",dates_title:"NEXT DATES",all_dates:"ALL DATES →",about_title:"ABOUT THE BAND",about_text:"Out of Time is a Belgian tribute band dedicated to the music and live spirit of R.E.M. From Orange Crush to Everybody Hurts and Losing My Religion, the show combines iconic songs with genuine live energy.",about_text2:"Available for festivals, clubs, cultural events and private events across Belgium, Germany and Europe.",booking_title:"BOOK OUT OF TIME",booking_text:"Looking for a professional R.E.M. tribute for a festival, club or event? Send us your project, date and location. We will get back to you with availability and technical information.",booking_cta:"BOOKING →",send:"SEND BOOKING REQUEST →",form_note:"The booking email is configured in the website code.",name_ph:"Name / Organisation",email_ph:"Email",event_ph:"Event / Venue / City",date_ph:"Date",message_ph:"Tell us about your event."},
+fr:{nav_home:"ACCUEIL",nav_band:"LE GROUPE",nav_live:"LIVE",nav_dates:"DATES",nav_booking:"BOOKING",nav_contact:"CONTACT",tagline:"L’expérience R.E.M. — en live",book:"BOOKER LE GROUPE →",scribble:"LES CHANSONS.<br>L’ÉNERGIE.<br>L’ESPRIT.",f1:"SON AUTHENTIQUE",f1p:"L’esprit de R.E.M.",f2:"GROUPE PROFESSIONNEL",f2p:"Expérience & passion",f3:"SHOW LIVE",f3p:"Émotion & énergie",f4:"BOOKING EUROPÉEN",f4p:"Belgique · Allemagne · Europe",video_title:"NOTRE VIDÉO LIVE",video_note:"Ajoutez ici la vidéo YouTube ou Vimeo du groupe.",dates_title:"PROCHAINES DATES",all_dates:"TOUTES LES DATES →",about_title:"À PROPOS DU GROUPE",about_text:"Out of Time est un tribute band belge consacré à la musique et à l’esprit live de R.E.M. D’Orange Crush à Everybody Hurts, sans oublier Losing My Religion, le spectacle traverse le répertoire du groupe avec une vraie énergie scénique.",about_text2:"Disponible pour festivals, clubs, événements culturels et événements privés en Belgique, en Allemagne et en Europe.",booking_title:"BOOKER OUT OF TIME",booking_text:"Vous recherchez un tribute R.E.M. professionnel pour un festival, un club ou un événement ? Envoyez-nous votre projet, la date et le lieu. Nous vous répondrons avec nos disponibilités et les informations techniques.",booking_cta:"BOOKING →",send:"ENVOYER LA DEMANDE →",form_note:"L’adresse e-mail de booking est configurée dans le code du site.",name_ph:"Nom / Organisation",email_ph:"E-mail",event_ph:"Événement / Lieu / Ville",date_ph:"Date",message_ph:"Parlez-nous de votre événement."}}
+function setLang(lang){
+  if(!t[lang]) lang='de';
+  document.documentElement.lang=lang;
+  document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.dataset.i18n;if(t[lang][k]!==undefined)el.innerHTML=t[lang][k]});
+  document.querySelectorAll('[data-ph]').forEach(el=>{const k=el.dataset.ph;if(t[lang][k]!==undefined)el.placeholder=t[lang][k]});
+  document.querySelectorAll('.lang button').forEach(btn=>btn.classList.toggle('active',btn.dataset.lang===lang));
+  try{localStorage.setItem('oot_lang',lang)}catch(e){}
+}
+function sendMail(e){e.preventDefault();const body=`Name / Organisation: ${document.getElementById('name').value}\nEmail: ${document.getElementById('email').value}\nEvent / Venue / City: ${document.getElementById('event').value}\nDate: ${document.getElementById('date').value}\n\n${document.getElementById('message').value}`;window.location.href=`mailto:${BOOKING_EMAIL}?subject=Out of Time booking request&body=${encodeURIComponent(body)}`}
+document.addEventListener('DOMContentLoaded',()=>{
+ document.querySelectorAll('.lang button').forEach(btn=>btn.addEventListener('click',()=>setLang(btn.dataset.lang)));
+ let saved='de';try{saved=localStorage.getItem('oot_lang')||'de'}catch(e){}
+ setLang(saved);
+});
 </script>
 </body>
 </html>
