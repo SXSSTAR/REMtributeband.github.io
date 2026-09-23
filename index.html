@@ -117,7 +117,7 @@ fr:{nav_home:"ACCUEIL",nav_band:"LE GROUPE",nav_live:"LIVE",nav_dates:"DATES",na
 function setLang(lang){document.documentElement.lang=lang;document.querySelectorAll("[data-i18n]").forEach(e=>{let k=e.dataset.i18n;if(t[lang][k])e.textContent=t[lang][k]});document.querySelectorAll(".lang button").forEach(b=>b.classList.toggle("active",b.dataset.lang===lang));localStorage.setItem("oot_lang",lang)}
 document.querySelectorAll(".lang button").forEach(b=>b.onclick=()=>setLang(b.dataset.lang));
 setLang(localStorage.getItem("oot_lang")||"de");
-function sendMail(e){e.preventDefault();const body=`Name / Organisation: ${name.value}\nEmail: ${email.value}\nEvent / Venue / City: ${event.value}\nDate: ${date.value}\n\n${message.value}`;window.location.href=`mailto:${BOOKING_EMAIL}?subject=Out of Time booking request&body=${encodeURIComponent(body)}`}
+function sendMail(e){e.preventDefault();const body=`Name / Organisation: ${name.value}\nEmail: ${email.value}\nEvent / Venue / City: ${event.value}\nDate: ${date.value}\n\n${message.value}`;window.location.href=`mailto:${stelio.gollas@gmail.com}?subject=Out of Time booking request&body=${encodeURIComponent(body)}`}
 </script>
 </body>
 </html>
