@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Out of Time — R.E.M. Tribute Band from Belgium. Live shows for clubs, festivals and events across Europe.">
+<title>Out of Time — R.E.M. Tribute Band</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Permanent+Marker&display=swap');
+:root{--yellow:#ffd400;--white:#f4f4f0;--black:#070707;--gray:#171717}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--black);color:var(--white);font-family:Oswald,Arial,sans-serif}
+a{color:inherit;text-decoration:none}.wrap{max-width:1280px;margin:auto;padding:0 28px}
+header{position:fixed;z-index:20;top:0;left:0;right:0;background:rgba(0,0,0,.92);border-bottom:3px solid var(--yellow)}
+nav{height:76px;display:flex;align-items:center;justify-content:center;gap:34px}.navlogo{position:absolute;left:25px;top:4px;width:175px;height:68px;object-fit:contain;object-position:center}
+nav a{font-size:17px;font-weight:700;letter-spacing:1.5px}nav a:hover{color:var(--yellow)}
+.lang{position:absolute;right:25px;display:flex;gap:14px}.lang button{background:none;border:0;color:#aaa;font:700 16px Oswald;cursor:pointer}.lang button.active{background:var(--yellow);color:#000;padding:7px 10px}
+.hero{min-height:720px;margin-top:76px;position:relative;overflow:hidden;background:#111}
+.hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.8) contrast(1.1)}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.96) 0%,rgba(0,0,0,.66) 38%,rgba(0,0,0,.15) 72%,rgba(0,0,0,.35))}
+.hero-content{position:relative;z-index:2;min-height:720px;display:flex;align-items:flex-end;padding:0 28px 55px}
+.hero-copy{max-width:570px}.hero-logo{width:450px;max-width:80%;margin-bottom:12px;filter:drop-shadow(0 5px 5px #000)}
+.tagline{font:34px "Permanent Marker",cursive;color:var(--yellow);transform:rotate(-2deg);margin:5px 0 25px}
+.btn{display:inline-block;background:var(--yellow);color:#000;padding:15px 27px;font-weight:700;font-size:20px;letter-spacing:1px;border:0;cursor:pointer;box-shadow:5px 5px 0 #000}
+.btn:hover{transform:translate(-2px,-2px)}
+.scribble{color:var(--yellow);font:28px "Permanent Marker";position:absolute;right:7%;top:115px;transform:rotate(-8deg);max-width:230px;text-align:center}
+.features{border-top:3px solid var(--yellow);border-bottom:3px solid var(--yellow);background:#0b0b0b}
+.feature-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}.feature{padding:25px 18px;text-align:center;border-right:1px solid #555}.feature:last-child{border:0}.feature .icon{font-size:32px;color:var(--yellow)}.feature h3{margin:6px 0 2px;font-size:18px}.feature p{margin:0;color:#bbb}
+section{padding:75px 0}.section-title{font-size:44px;line-height:1;margin:0 0 28px;text-transform:uppercase}.section-title span{color:var(--yellow)}
+.media-dates{display:grid;grid-template-columns:1.1fr .9fr;gap:35px}.video-card{position:relative;min-height:360px;background:#111;overflow:hidden;border:1px solid #333}.video-card img{width:100%;height:100%;object-fit:cover;filter:grayscale(1);opacity:.82}.play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:88px;height:88px;border-radius:50%;border:3px solid white;display:grid;place-items:center;font-size:38px;background:rgba(0,0,0,.55)}
+.dates{border-left:3px solid var(--yellow);padding-left:28px}.date{display:grid;grid-template-columns:105px 1fr;gap:15px;padding:12px 0;border-bottom:1px solid #444}.date strong{color:var(--yellow);font-size:19px}.date small{color:#aaa}
+.about{background:#111;border-top:2px solid #222;border-bottom:2px solid #222}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}.about-photo{width:100%;max-height:470px;object-fit:cover;filter:grayscale(1) contrast(1.1)}.about p{font-family:Arial,sans-serif;color:#d0d0d0;line-height:1.7;font-size:17px}
+.booking{background:var(--yellow);color:#000}.booking-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}.booking .section-title{font-size:55px}.booking p{font-family:Arial,sans-serif;font-size:18px;line-height:1.6}.booking .btn{background:#000;color:var(--yellow);box-shadow:5px 5px 0 #fff}
+form{display:grid;gap:13px}input,textarea{width:100%;padding:15px;border:2px solid #000;background:#fff;color:#000;font:16px Arial}textarea{min-height:120px}.form-note{font:13px Arial;margin-top:8px}
+footer{padding:32px 0;border-top:4px solid var(--yellow);text-align:center}footer .social{display:flex;justify-content:center;gap:25px;font-size:18px;margin-bottom:14px}footer a:hover{color:var(--yellow)}
+@media(max-width:900px){nav{gap:14px}.navlogo{position:relative;left:auto;top:auto;width:125px}.lang{right:10px}.hero-content{padding-bottom:35px}.scribble{display:none}.feature-grid,.media-dates,.about-grid,.booking-grid{grid-template-columns:1fr}.feature{border-right:0;border-bottom:1px solid #444}.dates{border-left:0;border-top:3px solid var(--yellow);padding:20px 0 0}.hero{min-height:640px}.hero-content{min-height:640px}.hero-logo{width:360px}}
+@media(max-width:620px){header{position:relative}nav{height:auto;min-height:72px;flex-wrap:wrap;padding:8px 5px}.navlogo{display:none}.lang{position:static}.hero{margin-top:0}.hero-content{min-height:620px}.hero-logo{max-width:95%}.tagline{font-size:25px}.section-title{font-size:35px}.booking .section-title{font-size:43px}.wrap{padding:0 18px}}
+</style>
+</head>
+<body>
+<header>
+<nav class="wrap">
+<img class="navlogo" src="assets/logo.png" alt="Out of Time R.E.M. Tribute Band">
+<a href="#home" data-i18n="nav_home">HOME</a><a href="#band" data-i18n="nav_band">THE BAND</a><a href="#live" data-i18n="nav_live">LIVE</a><a href="#dates" data-i18n="nav_dates">DATES</a><a href="#booking" data-i18n="nav_booking">BOOKING</a><a href="#contact" data-i18n="nav_contact">CONTACT</a>
+<div class="lang"><button data-lang="de" class="active">DE</button><button data-lang="en">EN</button><button data-lang="fr">FR</button></div>
+</nav>
+</header>
+
+<main id="home">
+<section class="hero">
+<img class="bg" src="assets/hero.jpg" alt="Out of Time performing live">
+<div class="scribble">THE SONGS.<br>THE ENERGY.<br>THE SPIRIT.</div>
+<div class="hero-content wrap">
+<div class="hero-copy">
+<img class="hero-logo" src="assets/logo.png" alt="Out of Time R.E.M. Tribute Band">
+<div class="tagline" data-i18n="tagline">The R.E.M. experience — live</div>
+<a class="btn" href="#booking" data-i18n="book">BOOK THE BAND →</a>
+</div>
+</div>
+</section>
+
+<div class="features"><div class="wrap feature-grid">
+<div class="feature"><div class="icon">★</div><h3 data-i18n="f1">AUTHENTIC SOUND</h3><p data-i18n="f1p">The spirit of R.E.M.</p></div>
+<div class="feature"><div class="icon">♟</div><h3 data-i18n="f2">PROFESSIONAL BAND</h3><p data-i18n="f2p">Experienced & passionate</p></div>
+<div class="feature"><div class="icon">♫</div><h3 data-i18n="f3">LIVE SHOW</h3><p data-i18n="f3p">Emotion & energy</p></div>
+<div class="feature"><div class="icon">◎</div><h3 data-i18n="f4">EUROPEAN BOOKING</h3><p data-i18n="f4p">Belgium · Germany · Europe</p></div>
+</div></div>
+
+<section id="live"><div class="wrap media-dates">
+<div>
+<h2 class="section-title" data-i18n="video_title">WATCH OUR <span>LIVE</span> VIDEO</h2>
+<div class="video-card"><img src="assets/portrait.jpg" alt="Out of Time singer live"><div class="play">▶</div></div>
+<p style="color:#aaa;font-family:Arial">Replace this panel with your YouTube or Vimeo embed when the final video is selected.</p>
+</div>
+<div id="dates" class="dates">
+<h2 class="section-title" data-i18n="dates_title">NEXT <span>DATES</span></h2>
+<div class="date"><strong>06.11.26</strong><div>NEUSTADT<br><small>Olaf's Werkstatt · Germany</small></div></div>
+<div class="date"><strong>07.11.26</strong><div>PÖSSNECK<br><small>Schützenhaus · Germany</small></div></div>
+<div class="date"><strong>06.02.27</strong><div>VERVIERS<br><small>Spirit of 66 · Belgium</small></div></div>
+<a class="btn" style="margin-top:25px" href="#contact" data-i18n="all_dates">ALL DATES →</a>
+</div>
+</div></section>
+
+<section id="band" class="about"><div class="wrap about-grid">
+<img class="about-photo" src="assets/hero.jpg" alt="Out of Time on stage">
+<div><h2 class="section-title" data-i18n="about_title">ABOUT <span>THE BAND</span></h2>
+<p data-i18n="about_text">Out of Time is a Belgian tribute band dedicated to the music and live spirit of R.E.M. From the explosive rock of Orange Crush to the emotion of Everybody Hurts and the timeless energy of Losing My Religion, the show travels across the band's catalogue with a strong focus on live atmosphere.</p>
+<p data-i18n="about_text2">Available for festivals, clubs, cultural events and private events across Belgium, Germany and Europe.</p>
+<a class="btn" href="#booking" data-i18n="booking_cta">BOOKING →</a></div>
+</div></section>
+
+<section id="booking" class="booking"><div class="wrap booking-grid">
+<div><h2 class="section-title" data-i18n="booking_title">BOOK <span>OUT OF TIME</span></h2>
+<p data-i18n="booking_text">Looking for a professional R.E.M. tribute for a festival, club or event? Send us your project, date and location. We will get back to you with availability and technical information.</p>
+<p><strong>Festivals · Clubs · Events · Germany · Belgium · Europe</strong></p></div>
+<div id="contact"><form onsubmit="sendMail(event)">
+<input id="name" required placeholder="Name / Organisation">
+<input id="email" type="email" required placeholder="Email">
+<input id="event" placeholder="Event / Venue / City">
+<input id="date" placeholder="Date">
+<textarea id="message" placeholder="Tell us about your event"></textarea>
+<button class="btn" type="submit" data-i18n="send">SEND BOOKING REQUEST →</button>
+<div class="form-note">Set your booking email in the <code>BOOKING_EMAIL</code> constant in script.js before publishing.</div>
+</form></div>
+</div></section>
+</main>
+
+<footer><div class="wrap"><div class="social"><a href="https://www.facebook.com/remtributeband" target="_blank">Facebook</a><a href="#">YouTube</a><a href="#">Instagram</a></div>
+<div>OUT OF TIME — R.E.M. TRIBUTE BAND</div><div style="color:var(--yellow);margin-top:8px">R.E.M. LIVES ON...</div></div></footer>
+
+<script>
+const BOOKING_EMAIL = "YOUR-BOOKING-EMAIL@example.com";
+const t={
+de:{nav_home:"HOME",nav_band:"DIE BAND",nav_live:"LIVE",nav_dates:"TERMINE",nav_booking:"BOOKING",nav_contact:"KONTAKT",tagline:"Das R.E.M.-Erlebnis — live",book:"BAND BUCHEN →",f1:"AUTHENTISCHER SOUND",f1p:"Der Geist von R.E.M.",f2:"PROFESSIONELLE BAND",f2p:"Erfahren & leidenschaftlich",f3:"LIVE-SHOW",f3p:"Emotion & Energie",f4:"EUROPAWEITES BOOKING",f4p:"Belgien · Deutschland · Europa",video_title:"UNSER",dates_title:"NÄCHSTE",all_dates:"ALLE TERMINE →",about_title:"ÜBER",about_text:"Out of Time ist eine belgische Tribute-Band, die sich der Musik und dem Live-Spirit von R.E.M. widmet. Von Orange Crush bis Everybody Hurts und Losing My Religion verbindet die Show bekannte Songs mit echter Live-Energie.",about_text2:"Buchbar für Festivals, Clubs, Kulturveranstaltungen und Events in Belgien, Deutschland und ganz Europa.",booking_title:"OUT OF TIME",booking_text:"Sie suchen eine professionelle R.E.M.-Tribute-Band für ein Festival, einen Club oder ein Event? Senden Sie uns Datum, Ort und Veranstaltungsinfos.",booking_cta:"BOOKING →",send:"BOOKING-ANFRAGE SENDEN →"},
+en:{nav_home:"HOME",nav_band:"THE BAND",nav_live:"LIVE",nav_dates:"DATES",nav_booking:"BOOKING",nav_contact:"CONTACT",tagline:"The R.E.M. experience — live",book:"BOOK THE BAND →",f1:"AUTHENTIC SOUND",f1p:"The spirit of R.E.M.",f2:"PROFESSIONAL BAND",f2p:"Experienced & passionate",f3:"LIVE SHOW",f3p:"Emotion & energy",f4:"EUROPEAN BOOKING",f4p:"Belgium · Germany · Europe",video_title:"WATCH OUR LIVE VIDEO",dates_title:"NEXT DATES",all_dates:"ALL DATES →",about_title:"ABOUT THE BAND",about_text:"Out of Time is a Belgian tribute band dedicated to the music and live spirit of R.E.M. From the explosive rock of Orange Crush to the emotion of Everybody Hurts and the timeless energy of Losing My Religion, the show travels across the band's catalogue with a strong focus on live atmosphere.",about_text2:"Available for festivals, clubs, cultural events and private events across Belgium, Germany and Europe.",booking_title:"BOOK OUT OF TIME",booking_text:"Looking for a professional R.E.M. tribute for a festival, club or event? Send us your project, date and location. We will get back to you with availability and technical information.",booking_cta:"BOOKING →",send:"SEND BOOKING REQUEST →"},
+fr:{nav_home:"ACCUEIL",nav_band:"LE GROUPE",nav_live:"LIVE",nav_dates:"DATES",nav_booking:"BOOKING",nav_contact:"CONTACT",tagline:"L’expérience R.E.M. — en live",book:"BOOKER LE GROUPE →",f1:"SON AUTHENTIQUE",f1p:"L’esprit de R.E.M.",f2:"GROUPE PROFESSIONNEL",f2p:"Expérience & passion",f3:"SHOW LIVE",f3p:"Émotion & énergie",f4:"BOOKING EUROPÉEN",f4p:"Belgique · Allemagne · Europe",video_title:"NOTRE VIDÉO LIVE",dates_title:"PROCHAINES DATES",all_dates:"TOUTES LES DATES →",about_title:"À PROPOS DU GROUPE",about_text:"Out of Time est un tribute band belge consacré à la musique et à l’esprit live de R.E.M. d’Orange Crush à Everybody Hurts, sans oublier Losing My Religion, le spectacle traverse le répertoire du groupe avec une vraie énergie scénique.",about_text2:"Disponible pour festivals, clubs, événements culturels et événements privés en Belgique, en Allemagne et en Europe.",booking_title:"BOOKER OUT OF TIME",booking_text:"Vous recherchez un tribute R.E.M. professionnel pour un festival, un club ou un événement ? Envoyez-nous votre projet, la date et le lieu. Nous vous répondrons avec nos disponibilités et les informations techniques.",booking_cta:"BOOKING →",send:"ENVOYER LA DEMANDE →"}};
+function setLang(lang){document.documentElement.lang=lang;document.querySelectorAll("[data-i18n]").forEach(e=>{let k=e.dataset.i18n;if(t[lang][k])e.textContent=t[lang][k]});document.querySelectorAll(".lang button").forEach(b=>b.classList.toggle("active",b.dataset.lang===lang));localStorage.setItem("oot_lang",lang)}
+document.querySelectorAll(".lang button").forEach(b=>b.onclick=()=>setLang(b.dataset.lang));
+setLang(localStorage.getItem("oot_lang")||"de");
+function sendMail(e){e.preventDefault();const body=`Name / Organisation: ${name.value}\nEmail: ${email.value}\nEvent / Venue / City: ${event.value}\nDate: ${date.value}\n\n${message.value}`;window.location.href=`mailto:${BOOKING_EMAIL}?subject=Out of Time booking request&body=${encodeURIComponent(body)}`}
+</script>
+</body>
+</html>
