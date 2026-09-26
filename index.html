@@ -16,7 +16,6 @@ nav a{font-size:17px;font-weight:700;letter-spacing:1.5px}nav a:hover{color:var(
 .lang{position:absolute;right:25px;display:flex;gap:14px}.lang button{background:none;border:0;color:#aaa;font:700 16px Oswald;cursor:pointer}.lang button.active{background:var(--yellow);color:#000;padding:7px 10px}
 .hero{min-height:720px;margin-top:76px;position:relative;overflow:hidden;background:#111}
 .hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.8) contrast(1.1)}
-
 .hero-content{position:relative;z-index:2;min-height:720px;display:flex;align-items:flex-end;padding:0 28px 55px}
 .hero-copy{max-width:570px}.hero-logo{width:550px;max-width:80%;margin-bottom:12px;filter:drop-shadow(0 5px 5px #000)}
 .tagline{font:34px "Caveat",cursive;color:var(--yellow);margin:5px 0 25px}
@@ -27,6 +26,17 @@ nav a{font-size:17px;font-weight:700;letter-spacing:1.5px}nav a:hover{color:var(
 .feature-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}.feature{padding:25px 18px;text-align:center;border-right:1px solid #555}.feature:last-child{border:0}.feature .icon{font-size:32px;color:var(--yellow)}.feature h3{margin:6px 0 2px;font-size:18px}.feature p{margin:0;color:#bbb}
 section{padding:75px 0}.section-title{font-size:44px;line-height:1;margin:0 0 28px;text-transform:uppercase}.section-title span{color:var(--yellow)}
 .media-dates{display:grid;grid-template-columns:1.1fr .9fr;gap:35px}.video-card{position:relative;min-height:360px;background:#111;overflow:hidden;border:1px solid #333}.video-card img{width:100%;height:100%;object-fit:cover;filter:grayscale(1);opacity:.82}.play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:88px;height:88px;border-radius:50%;border:3px solid white;display:grid;place-items:center;font-size:38px;background:rgba(0,0,0,.55)}
+.video-column{
+  min-width:0;
+}
+
+.video-card iframe{
+  display:block;
+  width:100%;
+  aspect-ratio:16/9;
+  height:auto;
+  border:0;
+}
 .dates{border-left:3px solid var(--yellow);padding-left:28px}.date{display:grid;grid-template-columns:105px 1fr;gap:15px;padding:12px 0;border-bottom:1px solid #444}.date strong{color:var(--yellow);font-size:19px}.date small{color:#aaa}
 .about{background:#111;border-top:2px solid #222;border-bottom:2px solid #222}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}.about-photo{width:100%;max-height:470px;object-fit:cover;filter:grayscale(1) contrast(1.1)}.about p{font-family:Arial,sans-serif;color:#d0d0d0;line-height:1.7;font-size:17px}
 .booking{background:var(--yellow);color:#000}.booking-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}.booking .section-title{font-size:55px}.booking p{font-family:Arial,sans-serif;font-size:18px;line-height:1.6}.booking .btn{background:#000;color:var(--yellow);box-shadow:5px 5px 0 #fff}
