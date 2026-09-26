@@ -152,12 +152,13 @@ footer{padding:32px 0;border-top:4px solid var(--yellow);text-align:center}foote
 <div><h2 class="section-title" data-i18n="booking_title">BOOK <span>OUT OF TIME</span></h2>
 <p data-i18n="booking_text">Looking for a professional R.E.M. tribute for a festival, club or event? Send us your project, date and location. We will get back to you with availability and technical information.</p>
 <p><strong>Festivals · Clubs · Events · Germany · Belgium · Europe</strong></p></div>
-<div id="contact"><form onsubmit="sendMail(event)">
-<input id="name" required data-ph="name_ph" placeholder="Name / Organisation">
-<input id="email" type="email" required data-ph="email_ph" placeholder="Email">
-<input id="event" data-ph="event_ph" placeholder="Event / Venue / City">
-<input id="date" data-ph="date_ph" placeholder="Date">
-<textarea id="message" data-ph="message_ph" placeholder="Tell us about your event"></textarea>
+<div id="contact"><form action="https://formspree.io/f/xqpadvqo" method="POST">
+<input id="name" name="name" required data-ph="name_ph" placeholder="Name / Organisation">
+<input id="email" name="email" type="email" required data-ph="email_ph" placeholder="Email">
+<input id="event" name="event" data-ph="event_ph" placeholder="Event / Venue / City">
+<input id="date" name="date" data-ph="date_ph" placeholder="Date">
+<textarea id="message" name="message" data-ph="message_ph" placeholder="Tell us about your event"></textarea>
+<input type="hidden" name="_subject" value="Out of Time — New booking request">
 <button class="btn" type="submit" data-i18n="send">SEND BOOKING REQUEST →</button>
 
 </form></div>
@@ -168,7 +169,6 @@ footer{padding:32px 0;border-top:4px solid var(--yellow);text-align:center}foote
 <div>OUT OF TIME — R.E.M. TRIBUTE BAND</div><div style="color:var(--yellow);margin-top:8px">R.E.M. LIVES ON...</div></div></footer>
 
 <script>
-const BOOKING_EMAIL = "stelio.gollas@gmail.com";
 const t={
 de:{nav_home:"HOME",nav_band:"DIE BAND",nav_live:"LIVE",nav_dates:"TERMINE",nav_booking:"BOOKING",nav_contact:"KONTAKT",tagline:"Das R.E.M.-Erlebnis — live",book:"BAND BUCHEN →",scribble:"Die songs<br>Die energie<br>Der spirit!",f1:"AUTHENTISCHER SOUND",f1p:"Der Geist von R.E.M.",f2:"PROFESSIONELLE BAND",f2p:"Erfahren & leidenschaftlich",f3:"LIVE-SHOW",f3p:"Emotion & Energie",f4:"EUROPAWEITES BOOKING",f4p:"Belgien · Deutschland · Europa",video_title:"UNSER LIVE-VIDEO",dates_title:"NÄCHSTE TERMINE",all_dates:"ALLE TERMINE →",about_title:"ÜBER DIE BAND",about_text:"Out of Time ist eine belgische Tribute-Band, die sich der Musik und dem Live-Spirit von R.E.M. widmet. Von Orange Crush bis Everybody Hurts und Losing My Religion verbindet die Show bekannte Songs mit echter Live-Energie.",about_text2:"Buchbar für Festivals, Clubs, Kulturveranstaltungen und Events in Belgien, Deutschland und ganz Europa.",booking_title:"OUT OF TIME BUCHEN",booking_text:"Sie suchen eine professionelle R.E.M.-Tribute-Band für ein Festival, einen Club oder ein Event? Senden Sie uns Datum, Ort und Veranstaltungsinfos.",booking_cta:"BOOKING →",send:"BOOKING-ANFRAGE SENDEN →",name_ph:"Name / Organisation",email_ph:"E-Mail",event_ph:"Event / Veranstaltungsort / Stadt",date_ph:"Datum",message_ph:"Erzählen Sie uns von Ihrer Veranstaltung."},
 en:{nav_home:"HOME",nav_band:"THE BAND",nav_live:"LIVE",nav_dates:"DATES",nav_booking:"BOOKING",nav_contact:"CONTACT",tagline:"The R.E.M. experience — live",book:"BOOK THE BAND →",scribble:"The songs<br>The energy<br>The spirit!",f1:"AUTHENTIC SOUND",f1p:"The spirit of R.E.M.",f2:"PROFESSIONAL BAND",f2p:"Experienced & passionate",f3:"LIVE SHOW",f3p:"Emotion & energy",f4:"EUROPEAN BOOKING",f4p:"Belgium · Germany · Europe",video_title:"WATCH OUR LIVE VIDEO",dates_title:"NEXT DATES",all_dates:"ALL DATES →",about_title:"ABOUT THE BAND",about_text:"Out of Time is a Belgian tribute band dedicated to the music and live spirit of R.E.M. From Orange Crush to Everybody Hurts and Losing My Religion, the show combines iconic songs with genuine live energy.",about_text2:"Available for festivals, clubs, cultural events and private events across Belgium, Germany and Europe.",booking_title:"BOOK OUT OF TIME",booking_text:"Looking for a professional R.E.M. tribute for a festival, club or event? Send us your project, date and location. We will get back to you with availability and technical information.",booking_cta:"BOOKING →",send:"SEND BOOKING REQUEST →",name_ph:"Name / Organisation",email_ph:"Email",event_ph:"Event / Venue / City",date_ph:"Date",message_ph:"Tell us about your event."},
@@ -181,7 +181,6 @@ function setLang(lang){
   document.querySelectorAll('.lang button').forEach(btn=>btn.classList.toggle('active',btn.dataset.lang===lang));
   try{localStorage.setItem('oot_lang',lang)}catch(e){}
 }
-function sendMail(e){e.preventDefault();const body=`Name / Organisation: ${document.getElementById('name').value}\nEmail: ${document.getElementById('email').value}\nEvent / Venue / City: ${document.getElementById('event').value}\nDate: ${document.getElementById('date').value}\n\n${document.getElementById('message').value}`;window.location.href=`mailto:${BOOKING_EMAIL}?subject=Out of Time booking request&body=${encodeURIComponent(body)}`}
 document.addEventListener('DOMContentLoaded',()=>{
  document.querySelectorAll('.lang button').forEach(btn=>btn.addEventListener('click',()=>setLang(btn.dataset.lang)));
  let saved='de';try{saved=localStorage.getItem('oot_lang')||'de'}catch(e){}
