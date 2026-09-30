@@ -38,6 +38,18 @@ section{padding:75px 0}.section-title{font-size:44px;line-height:1;margin:0 0 28
   border:0;
 }
 .dates{border-left:3px solid var(--yellow);padding-left:28px}.date{display:grid;grid-template-columns:105px 1fr;gap:15px;padding:12px 0;border-bottom:1px solid #444}.date strong{color:var(--yellow);font-size:19px}.date small{color:#aaa}
+.date .venue-link {
+  color: var(--yellow);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.2s ease;
+}
+
+.date .venue-link:hover,
+.date .venue-link:focus {
+  opacity: 0.75;
+}
 .about{background:#111;border-top:2px solid #222;border-bottom:2px solid #222}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}.about-photo{width:100%;max-height:470px;object-fit:cover;filter:grayscale(1) contrast(1.1)}.about p{font-family:Arial,sans-serif;color:#d0d0d0;line-height:1.7;font-size:17px}
 .booking{background:var(--yellow);color:#000}.booking-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}.booking .section-title{font-size:55px}.booking p{font-family:Arial,sans-serif;font-size:18px;line-height:1.6}.booking .btn{background:#000;color:var(--yellow);box-shadow:5px 5px 0 #fff}
 form{display:grid;gap:13px}input,textarea{width:100%;padding:15px;border:2px solid #000;background:#fff;color:#000;font:16px Arial}textarea{min-height:120px}.form-note{font:13px Arial;margin-top:8px}
@@ -95,42 +107,52 @@ footer{padding:32px 0;border-top:4px solid var(--yellow);text-align:center}foote
       </div>
     </div>
 
-    <div id="dates" class="dates">
-      <h2 class="section-title" data-i18n="dates_title">
-        NEXT <span>DATES</span>
-      </h2>
+    <div class="date">
+  <strong>06.11.26</strong>
+  <div>
+    <a class="venue-link"
+       href="https://www.olafs-werkstatt.de/index.php?id=7&e=904"
+       target="_blank"
+       rel="noopener noreferrer">
+      NEUSTADT
+    </a><br>
+    <small>Olaf's Werkstatt · Germany</small>
+  </div>
+</div>
 
-      <div class="date">
-        <strong>06.11.26</strong>
-        <div>
-          NEUSTADT<br>
-          <small>Olaf's Werkstatt · Germany</small>
-        </div>
-      </div>
+<div class="date">
+  <strong>07.11.26</strong>
+  <div>
+    <a class="venue-link"
+       href="https://www.ticketshop-thueringen.de/event/out-of-time-rem-tribute/38522/"
+       target="_blank"
+       rel="noopener noreferrer">
+      PÖSSNECK
+    </a><br>
+    <small>Schützenhaus · Germany</small>
+  </div>
+</div>
 
-      <div class="date">
-        <strong>07.11.26</strong>
-        <div>
-          PÖSSNECK<br>
-          <small>Schützenhaus · Germany</small>
-        </div>
-      </div>
+<div class="date">
+  <strong>06.02.27</strong>
+  <div>
+    <a class="venue-link"
+       href="https://www.spiritof66.be/agenda.php?month=2&year=2027"
+       target="_blank"
+       rel="noopener noreferrer">
+      VERVIERS
+    </a><br>
+    <small>Spirit of 66 · Belgium</small>
+  </div>
+</div>
 
-      <div class="date">
-        <strong>06.02.27</strong>
-        <div>
-          VERVIERS<br>
-          <small>Spirit of 66 · Belgium</small>
-        </div>
-      </div>
-
-      <div class="date">
-        <strong>21.08.27</strong>
-        <div>
-          GAURAIN-RAMECROIX<br>
-          <small>Ultimate Tribute · Belgium</small>
-        </div>
-      </div>
+<div class="date">
+  <strong>21.08.27</strong>
+  <div>
+    GAURAIN-RAMECROIX<br>
+    <small>Ultimate Tribute · Belgium</small>
+  </div>
+</div>
 
       <a class="btn" style="margin-top:25px" href="#contact" data-i18n="all_dates">
         ALL DATES →
